@@ -73,7 +73,7 @@ async def restart_handler(bot, m):
             f"**PLEASE UPGRADE YOUR PLAN**\n\n"
             f"**/upgrade for Plan Details**\n"
             f"**Send me your user id for authorization your User id** - `{m.chat.id}`\n\n"
-            f"**Sab kuch free me chahiye kya be laude**"
+            f"**Sab kuch free me chahiye kya be 😂**"
         )
         return
     await helper.clear(m)

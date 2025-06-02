@@ -19,7 +19,7 @@ async def account_login(bot, m):
         await editable.edit(f"Total links🔗 found are __{len(links)}__\n\nSend From where you want to download initial is __1__")
         if m.chat.id not in Config.AUTH_USERS:
             print(f"User ID not in AUTH_USERS", m.chat.id)
-            await bot.send_message(m.chat.id, f"__Oopss! You are not a Premium member __\n\n__PLEASE UPGRADE YOUR PLAN__\n\n**/upgrade for Plan Details**\n__Send me your user id for authorization your User id__ -     `{m.chat.id}`\n\n__Sab kuch free me chahiye kya be laude__")
+            await bot.send_message(m.chat.id, f"__Oopss! You are not a Premium member __\n\n__PLEASE UPGRADE YOUR PLAN__\n\n**/upgrade for Plan Details**\n__Send me your user id for authorization your User id__ -     `{m.chat.id}`\n\n__Sab kuch free me chahiye kya be 😂__")
             return
         input0=await bot.listen(chat_id=m.chat.id)
         raw_text = input0.text
@@ -52,7 +52,7 @@ async def account_login(bot, m):
         input4 = await bot.listen(chat_id=m.chat.id)
         token = input4.text
         await input4.delete(True)
-        await editable.edit("Now send the __Thumb URL__\nEg : `https://telegra.ph/file/0eca3245df8a40c7e68d4.jpg`\n\nor Send `no`")
+        await editable.edit("Now send the __Thumb URL__\nEg : `https://myappme.shop/img/file_202.jpg`\n\nor Send `no`")
         input6=await bot.listen(chat_id=m.chat.id)
         thumb = input6.text
         await input6.delete(True)
@@ -69,11 +69,11 @@ async def account_login(bot, m):
         try:
             await bot.send_message(chat_id=channel_id, text=f'🎯**Target Batch - {b_name}**')
         except Exception as e:
-            await m.reply_text(f"**Please remake a admin in channel..**\n\n**Bot Made By** 🔰『{Credit}🔰")
+            await m.reply_text(f"**Please remake a admin in channel..**\n\n**Bot Made By** 『{Credit}")
             channel_id=m.chat.id
         await editable.delete()
         await masterdl.process_links(links, raw_text, raw_text2, token, b_name, MR, channel_id, bot, m, path, thumb, Credit)
     except Exception as e:
-        await m.reply_text(f"**⚠️Downloading Failed⚠️**\n\n**Fail Reason »** {e}\n\n**╰────⌈✨❤️ 『{Credit}』 ❤️✨**⌋────╯")
+        await m.reply_text(f"**⚠️Downloading Failed⚠️**\n\n**Fail Reason »** {e}\n\n**╰────⌈💫 『{Credit}』 💫**⌋────╯")
         return
     
